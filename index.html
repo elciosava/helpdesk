@@ -22,7 +22,7 @@
         #login {
             display: grid;
             grid-template-columns: 600px 1fr;
-            gap: 20px;
+            gap: 100px;
             height: 100vh;
         }
 
@@ -90,24 +90,87 @@
             color: #1A76FB;
         }
 
-        .formulario img {
-            width: 120px;
-        }
-
         /*Coluna do formulario*/
         .formulario {
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: left;
             flex-direction: column;
         }
 
+        .formulario img {
+            width: 100px;
+            margin: 10px;
+        }
+
+        .formulario h2,
+        p {
+            margin: 10px;
+        }
+
         .form {
-            width: 350px;
+            width: 450px;
             height: 80vh;
             background: white;
-            border-radius: 12px;
+            border-radius: 8px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+            align-items: center;
+            padding: 25px;
+        }
+
+        .cabecalho {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            font-size: 1.2rem;
+            padding: 8px 5px;
+            margin-bottom: 15px;
+            margin-top: 5px;
+            border-radius: 4px;
+            border: 1px solid gray;
+        }
+
+        .lembrar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 5px 0 5px 0;
+        }
+
+        input[type="checkbox"] {
+            width: 17px;
+            height: 17px;
+            margin-right: 5px;
+        }
+
+        button {
+            width: 100%;
+            font-size: 1.2rem;
+            padding: 12px;
+            margin: 10px 0 10px 0;
+            border-radius: 4px;
+            border: none;
+        }
+
+        label {
+            font-size: 1.1rem;
+            font-weight: 600;
+            align-items: center;
+        }
+
+        a {
+            text-decoration: none;
+            color: #1A76FB;
         }
     </style>
 </head>
@@ -132,18 +195,20 @@
 
         <div class="formulario">
             <div class="form">
-                <img src="icones/message-regular-full.svg" alt="">
-                <h2>Bem vindo!</h2>
-                <p>Faça login para acessar sua conta</p>
+                <div class="cabecalho">
+                    <img src="icones/message-regular-full.svg" alt="">
+                    <h2>Bem vindo!</h2>
+                    <p>Faça login para acessar sua conta</p>
+                </div>
                 <form action="" method="post">
-                    <label for="email_usuario">Email</label>
+                    <label for="email_usuario">E-mail</label>
                     <input type="email" name="email_usuario" id="">
 
                     <label for="senha_usuario">Senha</label>
                     <input type="password" name="senha_usuario" id="">
 
                     <div class="lembrar">
-                        <input type="checkbox" name="" id=""><label for="">Lembrar de mim</label>
+                        <div class="lembrar"><input type="checkbox" name="" value="">Lembrar de mim</div>
                         <a href="#">Esqueci minha senha</a>
                     </div>
 
