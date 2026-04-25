@@ -1,24 +1,163 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            height: 100vh;
+        }
+
+        #login {
+            display: grid;
+            grid-template-columns: 600px 1fr;
+            gap: 20px;
+            height: 100vh;
+        }
+
+        .texto {
+            background: #011737;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .texto h3 {
+            font-size: 2rem;
+            font-weight: 400;
+        }
+
+        .texto p {
+            font-weight: 100;
+        }
+
+        .geral {
+            width: 350px;
+            height: 60vh;
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: column;
+        }
+
+        .help {
+            display: flex;
+            align-items: center;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-weight: 600;
+        }
+
+        strong {
+            font-weight: 700;
+        }
+
+        .sci {
+            display: flex;
+            align-items: center;
+        }
+
+        .sci img {
+            width: 30px;
+            margin-right: 5px;
+        }
+
+        .sci p {
+            font-size: 0.8rem;
+            font-weight: 100;
+        }
+
+        .help img {
+            width: 60px;
+            margin-right: 5px;
+        }
+
+        span {
+            color: #1A76FB;
+        }
+
+        .formulario img {
+            width: 120px;
+        }
+
+        /*Coluna do formulario*/
+        .formulario {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .form {
+            width: 350px;
+            height: 80vh;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        }
+    </style>
 </head>
+
 <body>
     <section id="login">
         <div class="texto">
-            <h1>Help Desk</h1>
-            <h3>Sistema de gerenciamento de chamados</h3>
-            <p>Organeze, acompanhe e resolva chamados de forma 
-                rapida e eficiente.</p>
-            
-            <div class="sci"><img src="" alt=""><p>Seguro confiavel e inteligente</p></div>
+            <div class="geral">
+                <div class="help"><img src="icones/message-regular-full.svg" alt="">
+                    <h1>HelpDesk</h1>
+                </div>
+                <h3>Sistema de gerenciamento <span>de Chamados</span></h3>
+                <p>Organize, acompanhe e resolva chamados de forma
+                    rapida e eficiente.</p>
+
+                <div class="sci">
+                    <img src="icones/cloud-regular-full.svg" alt="">
+                    <p>Seguro confiavel e eficiente</p>
+                </div>
+            </div>
         </div>
 
         <div class="formulario">
+            <div class="form">
+                <img src="icones/message-regular-full.svg" alt="">
+                <h2>Bem vindo!</h2>
+                <p>Faça login para acessar sua conta</p>
+                <form action="" method="post">
+                    <label for="email_usuario">Email</label>
+                    <input type="email" name="email_usuario" id="">
 
+                    <label for="senha_usuario">Senha</label>
+                    <input type="password" name="senha_usuario" id="">
+
+                    <div class="lembrar">
+                        <input type="checkbox" name="" id=""><label for="">Lembrar de mim</label>
+                        <a href="#">Esqueci minha senha</a>
+                    </div>
+
+                    <button type="submit">Entrar</button>
+                    <p>ou</p>
+                    <button>Entrar com Google</button>
+
+                    <div class="solicitar">
+                        <p>Não tem uma conta? <a href="">Solicite acesso</a></p>
+                    </div>
+                </form>
+            </div>
         </div>
     </section>
 </body>
+
 </html>
