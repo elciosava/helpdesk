@@ -1,0 +1,263 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    height: 100vh;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    height: 100vh;
+}
+
+/* LADO ESQUERDO */
+.left {
+    background: linear-gradient(135deg, #0d2b5b, #081c3a);
+    color: white;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.left h2 {
+    margin-bottom: 40px;
+    font-weight: 500;
+}
+
+.left h1 {
+    font-size: 36px;
+    line-height: 1.3;
+}
+
+.left h1 span {
+    color: #2f80ff;
+}
+
+.left p {
+    margin-top: 20px;
+    max-width: 350px;
+    opacity: 0.8;
+}
+
+.left small {
+    margin-top: 40px;
+    opacity: 0.7;
+}
+
+/* LADO DIREITO */
+.right {
+    background: #f5f7fb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CARD */
+.card {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    width: 350px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.icon {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.card h2 {
+    margin-bottom: 5px;
+}
+
+.card p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* FORM */
+form {
+    text-align: left;
+}
+
+label {
+    font-size: 13px;
+    margin-top: 10px;
+    display: block;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    outline: none;
+}
+
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.lembrar {
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0;
+    font-size: 12px;
+}
+
+.options a {
+    text-decoration: none;
+    color: #2f80ff;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #2f80ff;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1f6fe0;
+}
+
+/* DIVIDER */
+.divider {
+    text-align: center;
+    margin: 15px 0;
+    font-size: 12px;
+    color: #999;
+}
+
+/* GOOGLE */
+.google {
+    background: white;
+    color: #333;
+    border: 1px solid #ddd;
+}
+
+.google:hover {
+    background: #f0f0f0;
+}
+
+.register {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 12px;
+}
+
+.register a {
+    color: #2f80ff;
+    text-decoration: none;
+}
+
+/* INPUT COM ÍCONES */
+.input-group {
+    position: relative;
+    margin-top: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px 35px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    outline: none;
+}
+
+/* ÍCONE ESQUERDA */
+.icon-left {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+    opacity: 0.6;
+}
+
+/* ÍCONE DIREITA (OLHO) */
+.icon-right {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 14px;
+    opacity: 0.6;
+}
+
+.left {
+    position: relative;
+    color: white;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* IMAGEM */
+.left::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url('https://images.unsplash.com/photo-1492724441997-5dc865305da7') center/cover no-repeat;
+    filter: blur(4px);
+    transform: scale(1.1);
+}
+
+/* OVERLAY AZUL */
+.left::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(13, 43, 91, 0.9), rgba(8, 28, 58, 0.9));
+}
+
+/* GARANTE QUE TEXTO FIQUE NA FRENTE */
+.left * {
+    position: relative;
+    z-index: 1;
+}
+
+@media (max-width: 900px) {
+
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .left {
+        display: none;
+    }
+
+    .right {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 400px;
+    }
+}
